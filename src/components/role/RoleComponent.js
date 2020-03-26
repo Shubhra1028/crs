@@ -11,10 +11,9 @@ const styles = {
     },
 
     roleBg: {
-        height: "100vh",
         background : "url(assets/role.png)",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
         backgroundSize: "cover",
     }
 }
