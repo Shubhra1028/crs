@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face{
+  font-family: 'Avenir';
+  src: local('AvenirNextLTPro-Bold'), url(./fonts/AvenirNextLTPro-Bold.otf) format('opentype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.primary-font{
+  font-family: Avenir, sans-serif;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.paper{
+  width: 70%;
+  /* box-shadow: 0 10px 30px -5px rgba(54, 202, 142, .16); */
+  box-shadow: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading{
+  font-family: Avenir, sans-serif;
+  font-size: 2rem;
+  color: #6c63ff;
+  position: relative;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.heading::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #6c63ff;
+  margin-top: 10px;
+}
+
+.sub-heading{
+  font-family: Avenir, sans-serif;
+  font-size: 1.05rem;
+  color: #707070;
+  width: 80%;
+  letter-spacing: 1px;
+}
+
+.para{
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  opacity: .8;
+  letter-spacing: 2.5;
+  line-height: 1.4;
+  color: #707070;
+}
+
+.link{
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  opacity: .8;
+  text-transform: uppercase;
+  letter-spacing: 2.5;
+  color: #36CA8E;
+  text-decoration: none;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+
+.img {
+  width: 60%;
+  height: 60%;
+  margin-left: 5rem;
 }
