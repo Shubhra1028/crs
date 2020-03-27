@@ -7,10 +7,6 @@ import JobCard from './jobCard'
 
 class Company extends Component {
 
-    state={
-
-    }
-
     render() {
         return (
             <Fragment>

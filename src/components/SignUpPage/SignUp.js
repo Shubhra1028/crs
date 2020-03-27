@@ -1,5 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import CompanySignupForm from './CompanySignupForm';
+import { Box, Grid } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
+import Logo from "./blue-logo.png"
 
 class SignUp extends Component {
 
@@ -20,19 +23,27 @@ class SignUp extends Component {
 
     render() {
         const { step } = this.state;
-        switch(step){
-            case "business":
-                return (
+
+        return (
+            <Fragment>
+                <Box mt={3}>
+                <Grid container justify="center">
+                    <Grid item>
+                        <NavLink to="/">
+                            <img src={Logo} alt="Logo" />
+                        </NavLink>
+                    </Grid>
+                </Grid>
+                </Box>
+                {
+                    step==="business" ?
                     <CompanySignupForm 
                         handleStep = {this.handleStep}
                     />
-                )
-            
-            case "institute":
-                return (
-                    <h1>institute</h1>
-                )
-        }
+                    : <h1>institute</h1>
+                }
+            </Fragment>
+        )
     }
 }
 

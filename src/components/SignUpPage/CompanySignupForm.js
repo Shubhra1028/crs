@@ -10,15 +10,6 @@ export class CompanySignupForm extends Component {
     render() {
         return (
             <Fragment>
-                <Box mt={3}>
-                <Grid container justify="center">
-                    <Grid item>
-                        <NavLink to="/">
-                            <img src={Logo} alt="Logo" />
-                        </NavLink>
-                    </Grid>
-                </Grid>
-                </Box>
                 <Grid style={styles.root} container component={Paper} elevation={0}>
                     <Grid item xs={12} sm={12} md={6}>
                         <Grid style={Object.assign({}, styles.paper, styles.personBg)} container component="div" elevation={0}
@@ -89,6 +80,7 @@ export class CompanySignupForm extends Component {
                                     >
                                     Sign Up
                             </button>
+                            <p className="link" >Not a company but an institute ? <span>Sign up Here</span> </p>
                             </Box>
 
                         </form>
