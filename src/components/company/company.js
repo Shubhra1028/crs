@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import './style.scss'
 import logo from './../../assets/logo.png'
 import work from './../../assets/workDig.svg'
-import { Tabs, Tab, Drawer } from "@material-ui/core"
+import { Tabs, Tab, Drawer, TextField, Button } from "@material-ui/core"
 import JobCard from './jobCard'
 
 class Company extends Component {
@@ -48,14 +48,21 @@ class Company extends Component {
                 </div>
             </div>
             <Drawer
-                // className={classes.drawer}
                 variant="permanent"
-                // classes={{
-                // paper: classes.drawerPaper,
-                // }}
+                classes={{
+                    paper: "postJobForm",
+                }}
                 anchor="right"
             >
-                hello
+                <p className="links">Post Job</p>
+                <form action="" className="postJob" >
+                    <TextField id="jobPosition" name="jobPosition" label="Job Position" type="text" variant="outlined" />
+                    <TextField id="eligibility" name="eligibility" label="Eligibility criteria" type="text" variant="outlined" />
+                    <TextField id="vacancy" name="vacancy" label="Number of Vacancies" type="number" variant="outlined" />
+                    <TextField id="location" name="location" label="Location of the Job" type="text" variant="outlined" />
+                    <TextField id="file" name="file" label="" type="file" variant="outlined" />
+                    <Button type="submit" variant="contained" >Post job</Button>
+                </form>
             </Drawer>
             </Fragment>
         )
