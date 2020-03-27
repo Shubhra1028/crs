@@ -1,26 +1,21 @@
 import React from 'react'
-import HomePage from './HomePageComponent';
-import { makeStyles } from '@material-ui/core'
-
-const useStyles = makeStyles( theme => ({
-    
-    bgImg: {
-        backgroundImage: "url(assets/bg.png)",
-        height: "100vh",
-        width: "100%",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-    }
-
-}));
-
+import { Switch, Route, Redirect} from 'react-router-dom'
+import HomePage from './HomePage/HomePageComponent';
+import SignUp from "./SignUpPage/SignUp";
+import Login from "./LoginPage/Login";
 
 function MainComponent() {
-    const classes = useStyles();
+    
     return (
-        <div className={ classes.bgImg }>
-            <HomePage />
+        <div>
+                <Switch>
+                    <Route path="/home" component={ () => <HomePage /> } />
+                    <Route exact path="/signup/company" component={ () => <SignUp business />} />
+                    <Route exact path="/signup/institute" component={ () => <SignUp institute />} />
+                    <Route exact path="/login" component={ () => <Login /> } />
+                    <Redirect to="/home" />
+                </Switch>
+            
         </div>
     )
 }
