@@ -13,7 +13,7 @@ class JobCard extends Component {
                     <span className="parameter">Salary : </span>
                     <span className="paramValue">10 LPA</span>
                 </p>
-                <p className="linkBtn">view more</p>
+                <p className="linkBtn"> { this.props.cmplt ? "view result" : "view more" } </p>
             </div>
         )
     }
