@@ -21,7 +21,7 @@ function WhatWeDo() {
                             <a href="#" className="link">Get started</a>
                         </Box>
                     </Paper>
-                    <Paper className="paper">
+                    <Paper className="paper" >
                         <Box mx={5} mt={5} pt={5}>
                             <h3 className="sub-heading">Get you job postings & info out to the world.</h3>
                         </Box>

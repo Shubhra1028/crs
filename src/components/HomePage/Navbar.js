@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles, makeStyles} from '@material-ui/core/styles';
 import { AppBar, Toolbar, Button, Box } from '@material-ui/core';
+import {NavLink} from "react-router-dom";
 
 const SignUpBtn = withStyles( theme => ({ 
     root : {
@@ -43,6 +44,10 @@ const useStyles = makeStyles( theme => ({
         justifyContent: "flex-end",
     },
 
+    whiteColor: {
+        color: "white"
+    }
+
 }));
 
 export default function FixedContainer() {
@@ -54,11 +59,17 @@ export default function FixedContainer() {
       <AppBar  className={classes.navbar} position="static">
         <Container  className={classes.justifyCenter}  >
                 <Toolbar className={classes.title}>
-                        <img className={classes.logo} src="assets/logo.png" alt="Logo" />
+                        <NavLink to="/">
+                            <img className={classes.logo} src="assets/logo.png" alt="Logo" />
+                        </NavLink>
                 </Toolbar>
                 <Box>
-                    <Button color="inherit">Login</Button>
-                    <SignUpBtn className={classes.btn}>Sign Up</SignUpBtn>
+                    <NavLink to="/login">
+                        <Button className={classes.whiteColor}>Login</Button>
+                    </NavLink>
+                    <NavLink to="/signup/company"> 
+                        <SignUpBtn className={classes.btn}>Sign Up</SignUpBtn>
+                    </NavLink>
                 </Box>
             
         </Container>

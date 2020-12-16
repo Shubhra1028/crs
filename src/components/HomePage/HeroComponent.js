@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Grid, Typography, Link } from "@material-ui/core";
 import PrimaryButton from "../PrimaryButton";
 
 const styles = {
@@ -26,11 +26,18 @@ function HeroComponent() {
                 <Grid item sm >
                     
                     <Typography variant="subtitle1" style= {styles.whiteText}>Let the best talent be hired</Typography>
-                    <Typography variant="h2" className="primary-font" style= { styles.whiteText }>Find & Post Jobs</Typography>
+                    <h1 className="primary-font hero-heading">Find & post jobs!</h1>
                     
                     <Grid container>
+                        <a href="/signup/institute" >
                         <PrimaryButton inverted text="Looking for a job" />
-                        <Box ml={3}> <PrimaryButton text="Want to hire?" /> </Box>
+                        </a>
+
+                        <Box ml={3}> 
+                            <a href="/signup/company">
+                                <PrimaryButton text="Want to hire?" /> 
+                            </a>
+                        </Box>
                     </Grid>
                 </Grid>
             </Grid>
